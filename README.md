@@ -1,1 +1,1 @@
-[Page](a10nik.github.io/myf-testing)
+[Page](http://a10nik.github.io/myf-testing)
