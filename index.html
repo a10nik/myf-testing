@@ -5,9 +5,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>reveal.js + Jade - The HTML Presentation Framework</title>
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML by @hakimel. Ported to Jade by @jlengstorf.">
-    <meta name="author" content="Hakim El Hattab">
+    <title>Про Тестирование</title>
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="lib/css/zenburn.css">
     <link rel="stylesheet" href="css/theme/black.css" id="theme">
@@ -25,278 +23,330 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>Reveal.js + Jade</h1>
-          <h3>A shortcut for faster slideshow authoring.</h3>
-          <p><small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / 
-              <a href="https://twitter.com/hakimel">@hakimel</a></small></p>
-          <p><small>Ported to <a href="http://jade-lang.com">Jade</a> by 
-              <a href="http://lengstorf.com">Jason Lengstorf</a> / 
-              <a href="https://twitter.com/jlengstorf">jlengstorf</a>
-              </small></p>
+          <h1>Про Тестирование</h1>
+          <p><small>Артем Десятников</small></p>
         </section>
         <section>
-          <h2>Hello there</h2>
-          <p>
-            reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-            
-          </p>
+          <h2>Программа работает хорошо?</h2>
+          <ul>
+            <li class="fragment">посмотреть на код</li>
+            <li class="fragment">протестировать ее работу</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Протестировать вручную</h2>
+          <p>Самый интуитивный метод</p>
+          <p>Иногда нельзя иначе</p>
+          <aside class="notes">иначе тест Тьюринга</aside>
+        </section>
+        <section>
+          <h2>AI</h2><img src="img/hom3.png">
+        </section>
+        <section>
+          <h2>Обработка картинок</h2><img src="img/image-enchancement.jpg">
         </section>
         <section>
           <section>
-            <h2>Vertical slides</h2>
-            <p>Slides can be nested inside of each other.</p><br><a href="#" class="navigate-down"><img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
-          </section>
-          <section>
-            <h2>Basement Level 1</h2>
-            <p>
-              Nested slides are useful for adding additional detail underneath a high level horizontal slide.
-              
-            </p>
-          </section>
-          <section>
-            <h2>Basement Level 2</h2>
-            <p>That's it, time to go back up.</p><br><a href="#/2"><img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg)"></a>
-          </section>
-        </section>
-        <section>
-          <h2>Slides</h2>
-          <p>Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-            
-          </p>
-        </section>
-        <section>
-          <h2>Point of View</h2>
-          <p>Press <strong>ESC</strong> to enter the slide overview.</p>
-          <p>Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-            
-          </p>
-        </section>
-        <section>
-          <h2>Touch Optimized</h2>
-          <p>
-            Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-            
-          </p>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ## Markdown Support
-            
-            Write content using inline or external Markdown.
-            Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-            
-            ```
-            <section data-markdown>
-              ## Markdown support
-            
-              Write content using inline or external Markdown.
-              Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-            </section>
-            ```
-            
-          </script>
-        </section>
-        <section>
-          <section id="fragments">
-            <h2>Fragments</h2>
-            <p>Hit the next arrow...</p>
-            <p class="fragment">... to step through ...</p>
-            <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span>
-              
-            </p>
+            <h2>Автоматические тесты</h2>
+            <ul>
+              <li>быстрые</li>
+              <li>документируют</li>
+              <li>человек не нужен</li><img src="img/bender.jpg" class="fragment">
+            </ul>
             <aside class="notes">
-              <This>slide has fragments which are also stepped through in the notes window.</This>
+              написать другую программу, запускающую эту и проверяющую результаты.
+              можно запускать при коммитах
             </aside>
           </section>
           <section>
-            <h2>Fragment Styles</h2>
-            <p>There are different types of fragments, like:</p>
-            <p class="grow fragment">type</p>
-            <p class="shrink fragment">type</p>
-            <p class="fade-out fragment">type</p>
-            <p class="current-visible fragment">type</p>
-            <p class="highlight-red fragment">type</p>
-            <p class="highlight-blue fragment">type</p>
+            <h2>Автоматические тесты</h2>
+            <h3>Минусы</h3>
+            <ul>
+              <li>долго писать</li>
+              <li>плохо имитируют поведение человека</li><img src="img/sad-bender.jpg" class="fragment">
+            </ul>
+            <aside class="notes">про резкого пользователя</aside>
           </section>
         </section>
-        <section id="transitions">
-          <h2>Transition Styles</h2>
-          <p>You can select from different transitions, like:<br><a href="?transition=none#/transitions">None</a> - <a href="?transition=fade#/transitions">Fade</a> - <a href="?transition=slide#/transitions">Slide</a> - <a href="?transition=convex#/transitions">Convex</a> - <a href="?transition=concave#/transitions">Concave</a> - <a href="?transition=zoom#/transitions">Zoom</a>
-          </p>
-        </section>
-        <section id="themes">
-          <h2>Themes</h2>
-          <p>reveal.js comes with a few themes built in: <br>
-            <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck.--><a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> - <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> - <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> - <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> - <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> - <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a><br><a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> - <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> - <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> - <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> - <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-          </p>
+        <section data-background="img/problems-ahead.jpg">
+          <aside class="notes">в идеале - при ошибках ломаются, иначе - проходят</aside>
         </section>
         <section>
-          <section data-background="#dddddd">
-            <h2>Slide Backgrounds</h2>
-            <p>Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.</p><a href="#" class="navigate-down"><img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
-          </section>
-          <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-            <h2>Image Backgrounds</h2>
-            <pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-          </section>
-          <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-            <h2>Tiled Backgrounds</h2>
-            <pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;
-</code></pre>
-          </section>
-          <section data-backround-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-            <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-              <h2>Video Backgrounds</h2>
-              <pre></pre><code style="word-wrap: break-word;">
-                &lt;section data-background-video="video.mp4,video.webm"&gt;
-                </code>
-            </div>
-          </section>
-          <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-            <h2>... and GIFs!</h2>
-          </section>
-        </section>
-        <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-          <h2>Background Transitions</h2>
-          <p>Different background transitions are available via the backgroundTransition option. This one's called "zoom".</p>
-          <pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-        </section>
-        <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-          <h2>Background Transitions</h2>
-          <p>You can override background transitions per-slide.</p>
-          <pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;
-</code></pre>
-        </section>
-        <section>
-          <h2>Pretty Code</h2>
-          <pre><code data-trim contenteditable>function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}</code></pre>
-          <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.
-            
-          </p>
-        </section>
-        <section>
-          <h2>Marvelous Lists</h2>
+          <h2>Ошибки классификации</h2>
+          <p>Первого рода — посчитать плохую программу хорошей</p>
           <ul>
-            <li>No order here</li>
-            <li>Or here</li>
-            <li>Or here</li>
-            <li>Or here</li>
+            <li class="fragment">неожиданный сценарий</li>
+            <li class="fragment">неожиданное рабочее окружение (браузер, сервисы)</li>
           </ul>
-        </section>
-        <section>
-          <h2>Fantastic Ordered Lists</h2>
-          <ol>
-            <li>One is smaller than...</li>
-            <li>Two is smaller than...</li>
-            <li>Three!</li>
-          </ol>
-        </section>
-        <section>
-          <h2>Tabular Tables</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Value</th>
-                <th>Quantity</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Apples</td>
-                <td>$1</td>
-                <td>7</td>
-              </tr>
-              <tr>
-                <td>Lemonade</td>
-                <td>$2</td>
-                <td>18</td>
-              </tr>
-              <tr>
-                <td>Bread</td>
-                <td>$3</td>
-                <td>2</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section>
-          <h2>Clever Quotes</h2>
-          <p>These guys come in two forms, inline: 
-            <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-          </p>
-          <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-            &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-            
-          </blockquote>
-        </section>
-        <section>
-          <h2>Intergalactic Interconnections</h2>
-          <p>You can link between slides internally, <a href="#/2/3">like this</a>.
-            
-          </p>
-        </section>
-        <section>
-          <h2>Speaker View</h2>
-          <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.
-            
-          </p>
+          <p>Второго рода — посчитать хорошую программу плохой</p>
+          <ul>
+            <li class="fragment">слишком сложные тесты</li>
+            <li class="fragment">устаревшие тесты</li>
+            <li class="fragment">неожиданное тестовое окружение</li>
+          </ul>
           <aside class="notes">
-            <Oh>hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).</Oh>
+            <1>- смена организации в кевебе. половина багов в ие8.</1>сервисы, перетирающие реквизиты. площадки разных команд.
+            <2>- таймауты. смена верстки. брэндинг. настройки на соседних сервисах.</2>
           </aside>
         </section>
         <section>
-          <h2>Export to PDF</h2>
-          <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-          <iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
+          <h2>Конфликт</h2><img src="img/2-level-pyramid.png">
+          <aside class="notes">простота vs реалистичность</aside>
         </section>
         <section>
-          <h2>Global State</h2>
-          <p>Set <code>data-state="something"</code> on a slide and <code>"something"</code> will be added as a class to the document element when the slide is open. This lets you apply broader style changes, like switching the page background.
+          <h2>Простота. Юнит-тесты</h2>
+          <p>Тестирование минимальных кусочков приложения по-отдельности.</p>
+          <p class="fragment">Надо сделать их независимыми</p>
+          <aside class="notes">
+            падают только если ошибка в коде кусочка.
+            удобно искать. обычно - только при разработке кусочка или внесении изменений в кусочек.
+            иногда - при рефакторингах
+          </aside>
+        </section>
+        <section>
+          <h2>Простота. Юнит-тесты</h2>
+          <p>Тестирование минимальных кусочков приложения по-отдельности.</p>
+          <p class="fragment">Надо сделать их независимыми</p>
+          <aside class="notes">
+            падают только если ошибка в коде кусочка.
+            удобно искать. обычно - только при разработке кусочка или внесении изменений в кусочек.
+            иногда - при рефакторингах
+          </aside>
+        </section>
+        <section>
+          <h2>Пример TODO-MVC</h2>
+        </section>
+        <section>
+          <section>
+            <h2>Плохой пример номер раз</h2>
+            <div data-markdown>
+              ```cs
+              class TodoList {
+                private TodoItem[] items;
+                public TodoList() {
+                  this.items = Db.GetTodoItems();
+                }
+              }
+              void MainLogic() {
+                var list = new TodoList();
+                Render(list);
+              }
+              ```   
+            </div>
+          </section>
+          <section>
+            <h2>Плохой пример номер раз</h2>
+            <div data-markdown>
+              ```cs
+              class TodoList {
+                private TodoItem[] items;
+                public TodoList() {
+                  this.items = Db.GetTodoItems();
+                }
+              }
+              void Test() {
+                var list = new TodoList();
+                ???
+              }
+              ```   
+            </div>
+            <p class="fragment">Dependency Injection</p>
+          </section>
+          <section>
+            <h2>Исправленный пример номер раз</h2>
+            <div data-markdown>
+              ```cs
+              class TodoList {
+                private TodoItem[] items;
+                public TodoList(TodoItem[] items) {
+                  this.items = items;
+                }
+              }
+              void MainLogic() {
+                var db = new Db("login", "pass", catalog: "items");
+                var items = db.GetTodoItems();
+                var list = new TodoList(items);
+                Render(list);
+              }
+              void Test() {
+                var list = new TodoList(new TodoItem[] {...});
+                var rendered = Render(list);
+                Assert.That(rendered.HasSmthToDo, Is.False);
+              }
+              ```   
+            </div>
+          </section>
+        </section>
+        <section>
+          <h2>NUnit</h2>
+          <div data-markdown>
+            ```cs
+            [TestFixture]
+            public class TodoListTest
+            {
+              [Test]
+              public void HasNothingToDoWhenEmpty()
+              {
+                var list = new TodoList(new TodoItem[] {});
+                Assert.That(rendered.HasSmthToDo, Is.False);
+              }
+            }
+            ```
             
-          </p>
-        </section>
-        <section data-state="customevent">
-          <h2>State Events</h2>
-          <p>Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.</p>
-          <pre><code data-trim contenteditable style="font-size: 18px;" class="javascript">Reveal.addEventListener( 'customevent', function() {
-  console.log( '"customevent" has fired' );
-} );
-</code></pre>
+          </div>
         </section>
         <section>
-          <h2>Take a Moment</h2>
-          <p>
-            Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+          <h2>Mocha + Chai</h2>
+          <div data-markdown>
+            ```js
+            describe("todo list", () => {
+              it("has nothing to do when empty", () => {
+                let list = new TodoList([]);
+                expect(list.hasSmthToDo).to.be.false;
+              });
+            });
+            ```
             
-          </p>
+          </div>
         </section>
         <section>
-          <h2>Much more</h2>
-          <ul>
-            <li>Right-to-left support</li>
-            <li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-            <li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-            <li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-            <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-          </ul>
+          <h2>Семантичные Assert-методы</h2>
+          <h3>NUnit</h3>
+          <div data-markdown>
+            ```cs
+            Assert.AreNotEqual(5, 2 + 2);
+            // vs
+            Assert.That(2 + 2, Is.Not.EqualTo(5));
+            Assert.That(SomeMethod, Throws.TypeOf<ArgumentException>()
+                .With.Property("Parameter").EqualTo("myParam"));
+            ```
+            
+          </div>
+        </section>
+        <section>
+          <section>
+            <h2>Плохой номер два</h2>
+            <div data-markdown>
+              ```cs
+              class Db {
+                ...
+                public TodoItem[] GetTodoItems() {
+                  return new DbConnection(login, password, catalog)
+                    .Query("select * from todos")
+                    .Select(row => new TodoItem
+                    {
+                      Text = row["text"],
+                      Done = row["done"] == "1"
+                    });
+                }
+                public void SaveTodoItems(TodoItem[] items) {
+                  new DbConnection(login, password, catalog)
+                    .Query("insert or update items " + ...));
+                }
+              }
+              ```
+            </div>
+            <p class="fragment">Dependency Inversion</p>
+          </section>
+          <section>
+            <h2>Исправленный пример номер два</h2>
+            <div data-markdown>
+              ```cs
+              class Db {
+                private IDbConnection connection;
+                ...
+                public TodoItem[] GetTodoItems() {
+                  return connection
+                    .Query("select * from todos")
+                    .Select(row => new TodoItem
+                    {
+                      Text = row["text"],
+                      Done = row["done"] == "1"
+                    });
+                }
+                public void SaveTodoItems(TodoItem[] items) {
+                  connection.Query("insert or update items " + ...);
+                }
+              }
+              ```
+            </div>
+            <p class="fragment">Dependency Inversion</p>
+          </section>
+          <section>
+            <h2>Исправленный пример номер два. Тест</h2>
+            <div data-markdown>
+              ```cs
+              class TestConnection : IDbConnection {
+                public RowSet Query(string query) { return new RowSet(); }
+                public void Dispose() {}
+              }
+              [Test]
+              void AllDoneWhenListIsEmpty() {
+                var header = new Db(new EmptyItemsProvider());
+                Assert.That(header.AllDone);
+              }
+              ```
+            </div>
+          </section>
+          <section>
+            <h2>Исправленный пример номер два. FakeItEasy</h2>
+            <div data-markdown>
+              ```cs
+              [Test]
+              void DbYieldsEmptyItemListWhenRowSetIsEmpty() {
+                var fakeConnection = A.Fake<IDbConnection>();
+                A.CallTo(() => fakeConnection.Query("select * from todos"))
+                  .Returns(new RowSet());
+                var db = new Db(fakeItemProvider);
+                Assert.That(db.GetTodoItems(), Is.Empty);
+              }
+              ```  
+            </div>
+          </section>
+          <section>
+            <h2>Интеграционный тест</h2>
+            <div data-markdown>
+              ```cs
+              new MainLogic(new Db(fakeConnection));
+              ```
+            </div>
+            <p>Затычки на каком-то уровне. Поверх - настоящая логика</p>
+          </section>
+          <section>
+            <h2>Single Responsibility</h2>
+            <div data-markdown>
+              ```cs
+              class DbUtils {
+                public TodoItem RowToTodoItem(Row row) { ... }
+                public string ToUpdateQuery(TodoItem[] items) { ... }
+              }
+              [Test]
+              void RowToTodoItemConvertsSimpleRow() {
+                var row = new Row();
+                row.Add("done", "0");
+                row.Add("text", "hello");
+                var todoItem = DbUtils.RowToTodoItem(row);
+                Assert.That(todoItem.Text, Is.EqualTo("hello"));
+                Assert.That(todoItem.Done, Is.False);
+              }
+              ```
+            </div>
+            <p class="fragment">Чистые функции. Декомпозиция.</p>
+          </section>
+        </section>
+        <section>
+          <h2>End-To-End тесты</h2>
+          <p>Тестирование в браузере</p><img src="img/selenium-workflow.jpg">
+          <aside class="notes">хрупкие. и ошибки расплывчатые</aside>
+        </section>
+        <section><img src="img/3-level-pyramid.png">
+          <aside class="notes">
+            гугл. разница в понимании. сначала - e2e и unit. потом - integration.
+            искусство
+          </aside>
         </section>
         <section>
           <h1>THE END</h1>
-          <p>- <a href="http://slides.com">Try the online editor</a><br>- <a href="https://github.com/jlengstorf/reveal.js-jade">Source code</a><br>- <a href="https://github.com/hakimel/reveal.js">Original project and documentation</a></p>
         </section>
       </div>
     </div>
@@ -316,7 +366,7 @@
           { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return true; }, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: 'plugin/zoom-js/zoom.js', async: true },
           { src: 'plugin/notes/notes.js', async: true }
         ]
