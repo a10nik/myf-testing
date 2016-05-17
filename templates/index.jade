@@ -90,15 +90,6 @@ block slides
       иногда - при рефакторингах
       
   +slide
-    h2 Простота. Юнит-тесты
-    p Тестирование минимальных кусочков приложения по-отдельности.
-    p.fragment Надо сделать их независимыми
-    aside.notes
-      падают только если ошибка в коде кусочка.
-      удобно искать. обычно - только при разработке кусочка или внесении изменений в кусочек.
-      иногда - при рефакторингах
-  
-  +slide
     h2 Пример TODO-MVC
 
   +slide
@@ -151,9 +142,9 @@ block slides
           Render(list);
         }
         void Test() {
-          var list = new TodoList(new TodoItem[] {...});
+          var list = new TodoList(new[] { new TodoItem() { Text = "Первая тудушка", Done = false } });
           var rendered = Render(list);
-          Assert.That(rendered.HasSmthToDo, Is.False);
+          Assert.That(rendered, Contains.Substring("Первая тудушка"));
         }
         ```   
   +slide
@@ -167,7 +158,7 @@ block slides
         public void HasNothingToDoWhenEmpty()
         {
           var list = new TodoList(new TodoItem[] {});
-          Assert.That(rendered.HasSmthToDo, Is.False);
+          Assert.That(list.HasSmthToDo, Is.False);
         }
       }
       ```
@@ -247,14 +238,14 @@ block slides
       h2 Исправленный пример номер два. Тест
       div(data-markdown=true).
         ```cs
-        class TestConnection : IDbConnection {
+        class TestEmptyConnection : IDbConnection {
           public RowSet Query(string query) { return new RowSet(); }
           public void Dispose() {}
         }
         [Test]
         void AllDoneWhenListIsEmpty() {
-          var header = new Db(new EmptyItemsProvider());
-          Assert.That(header.AllDone);
+          var db = new Db(new TestEmptyConnection());
+          Assert.That(db.GetTodoItems(), Is.Empty);
         }
         ```
     +slide
